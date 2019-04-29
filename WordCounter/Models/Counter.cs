@@ -13,17 +13,41 @@ namespace WordCounter.Models
     public bool DoesContain(string word, string sentence)
     {
       string[] sentenceArray = sentence.Split(" ");
-      string[] wordArray = word.Split(" ");
-      // for (int i = 0; i <= SentenceArray.Length - 1; i++)
+
+      for (int i = 0; i <= sentenceArray.Length; i++)
       {
-        string[] value =  Array.FindAll(sentenceArray, s => s.Equals(wordArray));
-          if (value.Length == 1)
+        string newSentence = String.Join("", sentenceArray[i]);
+        if (newSentence == word)
+        {
+          return true;
+        }
+      }
+      return false;
+    }
+      public int CountContains(string word, string sentence)
+      {
+        // char[] sentenceArray = sentence.ToCharArray();
+        string[] sentenceArray = sentence.Split(" ");
+        int count = 0;
+        for (int i = 0; i <= sentenceArray.Length - 1; i++)
+        {
+          string newSentence = String.Join("", sentenceArray[i]);
+          if (newSentence == word)
           {
-            return true;
-          }
-          return false;
+            count += 1;
+          } else if (newSentence == (word + "."))
+          {
+            count += 1;
+        } else if (newSentence == (word + "!"))
+        {
+          count += 1;
+        } else if ( newSentence == (word + "?"))
+        {
+          count += 1;
         }
 
+        }
+        return count;
       }
     }
   }

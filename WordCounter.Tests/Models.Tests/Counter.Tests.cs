@@ -19,6 +19,26 @@ namespace WordCounter.Tests
       Assert.AreEqual(true, newWord.DoesContain("test", "test"));
     }
 
+    [TestMethod]
+    public void CountContains_DoesContain_True()
+    {
+      Counter newWord = new Counter();
+      Assert.AreEqual(2, newWord.CountContains("test", "this is a test test"));
+    }
+
+    [TestMethod]
+    public void CountContainsAccurate_DoesContain_True()
+    {
+      Counter newWord = new Counter();
+      Assert.AreEqual(1, newWord.CountContains("test", "this is a test testify"));
+    }
+
+    [TestMethod]
+    public void CountContainsCharacters_DoesContainCharacters_True()
+    {
+      Counter newWord = new Counter();
+      Assert.AreEqual(2, newWord.CountContains("test", "this is a test test."));
+    }
 
   }
 }
