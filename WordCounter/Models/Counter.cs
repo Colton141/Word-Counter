@@ -12,11 +12,18 @@ namespace WordCounter.Models
     }
     public bool DoesContain(string word, string sentence)
     {
-      char[] SentenceArray = word.ToCharArray().ToLowerCase();
-      for (int i = 0; i = SentenceArray.length; i++)
+      string[] sentenceArray = sentence.Split(" ");
+      string[] wordArray = word.Split(" ");
+      // for (int i = 0; i <= SentenceArray.Length - 1; i++)
       {
-        
+        string[] value =  Array.FindAll(sentenceArray, s => s.Equals(wordArray));
+          if (value.Length == 1)
+          {
+            return true;
+          }
+          return false;
+        }
+
       }
     }
-}
-}
+  }
