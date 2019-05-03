@@ -7,9 +7,14 @@ namespace WordCounter.Models
   {
     private string _word;
     private string _phrase;
-    public bool IsWord(string word)
+    private string[] _splitPhrase;
+
+    public counter(string Word, string Phrase)
     {
-    return true;
+    _word = Word;
+    _phrase = Phrase;
+    _splitPhrase = phrase.Split(" ");
+    
     }
     public bool DoesContain(string word, string sentence)
     {
