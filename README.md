@@ -1,10 +1,10 @@
-# _Scrabble Score_
+# _Word Counter_
 
 #### By _**Colton Lacey**_
 
 ## Description
 
-_A program that will take in a user inputted word and return it's value in Scrabble score._
+_A program that will take in a user inputted word and phrase and return how many times that word was used in the phrase._
 
 | Behavior | Input | Output |
 | ------------- |:-------------:| -----:|
