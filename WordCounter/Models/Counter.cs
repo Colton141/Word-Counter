@@ -38,22 +38,21 @@ namespace WordCounter.Models
           if (newSentence == _word)
           {
             count += 1;
-            } else if (newSentence == (_word + "."))
-            {
-              count += 1;
-            } else if (newSentence == (_word + "!"))
-            {
-              count += 1;
-            } else if (newSentence == (_word + "?"))
-            {
-              count += 1;
-            } else if (newSentence == (_word + ","))
-            {
-              count += 1;
-            }
-
-            }
-            return count;
-            }
+          } else if (newSentence == (_word + "."))
+          {
+            count += 1;
+          } else if (newSentence == (_word + "!"))
+          {
+            count += 1;
+          } else if (newSentence == (_word + "?"))
+          {
+            count += 1;
+          } else if (newSentence == (_word + ","))
+          {
+            count += 1;
+          }
+        }
+        return count;
+      }
     }
   }
