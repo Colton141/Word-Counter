@@ -14,46 +14,46 @@ namespace WordCounter.Models
     _word = Word;
     _phrase = Phrase;
     _splitPhrase = phrase.Split(" ");
-    
-    }
-    public bool DoesContain(string word, string sentence)
-    {
-      string[] sentenceArray = sentence.Split(" ");
 
-      for (int i = 0; i <= sentenceArray.Length; i++)
+    }
+    public bool DoesContain()
+    {
+
+      for (int i = 0; i <= _splitPhrase.Length; i++)
       {
-        string newSentence = String.Join("", sentenceArray[i]);
-        if (newSentence == word)
+        string newSentence = String.Join("", _splitPhrase[i]);
+        if (newSentence == _word)
         {
           return true;
         }
       }
       return false;
     }
-      public int CountContains(string word, string sentence)
+      public int CountContains()
       {
-        // char[] sentenceArray = sentence.ToCharArray();
-        string[] sentenceArray = sentence.Split(" ");
         int count = 0;
-        for (int i = 0; i <= sentenceArray.Length - 1; i++)
+        for (int i = 0; i <= _splitPhrase.Length - 1; i++)
         {
-          string newSentence = String.Join("", sentenceArray[i]);
-          if (newSentence == word)
+          string newSentence = String.Join("", _splitPhrase[i]);
+          if (newSentence == _word)
           {
             count += 1;
-          } else if (newSentence == (word + "."))
-          {
-            count += 1;
-        } else if (newSentence == (word + "!"))
-        {
-          count += 1;
-        } else if ( newSentence == (word + "?"))
-        {
-          count += 1;
-        }
+            } else if (newSentence == (_word + "."))
+            {
+              count += 1;
+            } else if (newSentence == (_word + "!"))
+            {
+              count += 1;
+            } else if (newSentence == (_word + "?"))
+            {
+              count += 1;
+            } else if (newSentence == (_word + ","))
+            {
+              count += 1;
+            }
 
-        }
-        return count;
-      }
+            }
+            return count;
+            }
     }
   }
