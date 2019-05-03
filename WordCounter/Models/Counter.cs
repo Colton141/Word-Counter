@@ -5,7 +5,8 @@ namespace WordCounter.Models
 {
   public class Counter
   {
-    // private string _word;
+    private string _word;
+    private string _phrase;
     public bool IsWord(string word)
     {
     return true;
