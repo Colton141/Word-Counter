@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace TravelDiary.Controllers
+namespace WordCounter.Controllers
 {
     public class HomeController : Controller
     {
