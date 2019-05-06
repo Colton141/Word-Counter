@@ -10,8 +10,8 @@ _A program that will take in a user inputted word and phrase and return how many
 | ------------- |:-------------:| -----:|
 | The program should take in a user input | cat | cat |
 | The program should take in a user inputted sentence | "I walked my cat today." | "I walked my cat today." |
-| The program should look for how many time that word is used in the sentence | cat | "I walked my _cat_ today." |
-| The program should return how many times the word was used in the sentence | cat | The word cat was used 1 time in your sentence |
+| The program should look for how many time that word is used in the sentence | cat , I walked my cat today | 1 |
+| The program should return how many times the word was used in the sentence regardless of special characters | cat , I walked my cat today.|  1 |
 
 ## Setup/Installation Requirements
 
